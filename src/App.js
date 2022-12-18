@@ -1,17 +1,15 @@
 import React from "react";
-import ColorList from "./components/ColorList";
+import ColorList from "./components/ColorList.js";
 import AddColorForm from "./components/AddColorForm";
 
 export default function App() {
   return (
     <>
-    <AddColorForm />
-    <ColorList />
-  </>
+      <AddColorForm />
+      <ColorList />
+    </>
   );
 }
-
-
 
 // export default function App() {
 //   const [colors, setColors] = useState(colorData);
