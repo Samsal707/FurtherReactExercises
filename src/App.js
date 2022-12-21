@@ -1,12 +1,14 @@
 import React from "react";
 import ColorList from "./components/ColorList.js";
 import AddColorForm from "./components/AddColorForm";
+import Checkbox from "./components/Checkbox.js";
 
 export default function App() {
   return (
     <>
       <AddColorForm />
       <ColorList />
+      <Checkbox />
     </>
   );
 }
