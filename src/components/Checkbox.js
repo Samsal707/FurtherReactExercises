@@ -1,4 +1,24 @@
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from 'react';
+
+export default function Checkbox() {
+    const [checked, setChecked] = useState(false);
+    //to avoid the cases - of blocking alert() and unreachable alert() demonstrated we use the useeffect
+    useEffect(() => {
+    alert(`checked: ${checked.toString()}`);
+  });
+  return (
+    <>
+      <input
+        type="checkbox"
+        value={checked}
+        onChange={() => setChecked(checked => !checked)}
+      />
+      {checked ? "checked" : "not checked"}
+    </>
+  )
+}
+
 
 // export default function Checkbox() {
 //     const [checked, setChecked] = useState(false);
@@ -17,20 +37,20 @@ import React, { useState } from "react";
 // }
 
 
-export default function Checkbox() {
-  const [checked, setChecked] = useState(false);
+// export default function Checkbox() {
+//   const [checked, setChecked] = useState(false);
 
-  return (
-    <>
-      <input
-        type="checkbox"
-        value={checked}
-        onChange={() => setChecked(checked => !checked)}
-      />
-      {checked ? "checked" : "not checked"}
-    </>
-  );
-    // her the alert is placed at the end - it will never execute after rendering of the component
-  alert(`checked: ${checked.toString()}`);
-};
+//   return (
+//     <>
+//       <input
+//         type="checkbox"
+//         value={checked}
+//         onChange={() => setChecked(checked => !checked)}
+//       />
+//       {checked ? "checked" : "not checked"}
+//     </>
+//   );
+//     // her the alert is placed at the end - it will never execute after rendering of the component
+//   alert(`checked: ${checked.toString()}`);
+// };
 
