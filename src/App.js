@@ -39,19 +39,42 @@ export default function App() {
     set("");
   };
 
+  //using useEffect with a dependency /starting a react app
+  //with an empty array
   useEffect(() => {
-    console.log(`typing "${val}"`);
-  });
+  console.log("only once after initial render");
+   }, []);
 
-  useEffect(() => {
-    console.log(`saved phrase: "${phrase}"`);
-    console.log(val)
-  });
+  //when a value changes
+  // useEffect(() => {
+  // console.log("either val or phrase has changed");
+  //   }, [val, phrase]);
 
-   useEffect(() => {
-    console.log(phrase);
-    console.log(val)
-  });
+  
+  // useEffect(() => {
+  // console.log(`typing "${val}"`);
+  //   }, [val]);
+
+  // useEffect(() => {
+  // console.log(`saved phrase: "${phrase}"`);
+  //  }, [phrase]);
+
+
+  // using useEffect without a dependency array.
+  // useEffect(() => {
+  //   console.log(`typing "${val}"`);
+  // });
+
+  // useEffect(() => {
+  //   console.log(`saved phrase: "${phrase}"`);
+  //   console.log(val)
+  // });
+
+  //  useEffect(() => {
+  //   console.log(phrase);
+  //   console.log(val)
+  // });
+
 
   return (
     <>
